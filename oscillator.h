@@ -4,6 +4,25 @@
 #ifndef usr_osc_h
 #define usr_osc_h
 
+
+/****************************************************************************/
+/*               Useful Macros                                              */
+#define BITS2WORD(sfrBitfield)   ( *((unsigned int*) &sfrBitfield) )
+// Convert a bitfield to a word (unsigned int).
+#define BITS2BYTEL(sfrBitfield)   ( ((unsigned char*) &sfrBitfield)[0] )
+// Return the low byte (as a unsigned char) of a bitfield.
+#define BITS2BYTEH(sfrBitfield)   ( ((unsigned char*) &sfrBitfield)[1] )
+// Return the high byte (as a unsigned char) of a bitfield.
+
+
+/****************************************************************************/
+/*               User Configurable Definitions                              */
+// Processor clock frequency selection
+#define   CLOCK_FREQ  0		// Use 32MHz clock - default for demo board
+//#define CLOCK_FREQ  1     //16000000ULL Use 16MHz clock
+//#define CLOCK_FREQ  2     //8000000UL -  Use 8MHz clock
+//#define CLOCK_FREQ  3     //4000000ULL -Use 4MHz clock
+
 /*********************************************************************
  * Macro:           Cosc_Set() 
  * PreCondition:    None
@@ -16,6 +35,20 @@
 
 #define Cosc_Set(source)  (OSCCONbits.COSC =  source)
 
+
+/*********************************************************************
+ * Macro:           Cosc_Set() 
+ * PreCondition:    None
+ * Side Effects:    None
+ * Overview:        Current Oscillator Selection bits. 
+ * Input:           None
+ * Output:          Give current oscillator setting
+ * Note:            None
+ ********************************************************************/
+
+#define Cosc()  (OSCCONbits.COSC)
+
+
 /*********************************************************************
  * Macro:           Nosc_Set() 
  * PreCondition:    None
@@ -26,6 +59,19 @@
  * Note:            None
  ********************************************************************/
 #define Nosc_Set(source)  (OSCCONbits.NOSC =  source)
+
+
+/*********************************************************************
+ * Macro:           Nosc() 
+ * PreCondition:    None
+ * Side Effects:    None
+ * Overview:        New Oscillator Selection bits. 
+ * Input:           None
+ * Output:          give new oscillator bit  
+ * Note:            None
+ ********************************************************************/
+#define Nosc()  (OSCCONbits.NOSC)
+
 
 /*********************************************************************
  * Macro:           IsClockLock() 
