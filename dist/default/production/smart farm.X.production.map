@@ -87,9 +87,9 @@ Program Memory  [Origin = 0x100, Length = 0x2ae00]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0x7c0           0xba0  (2976)
-.text                        0x8c0                0xdc           0x14a  (330)
+.text                        0x8c0                0xca           0x12f  (303)
 
-                 Total program memory used (bytes):          0xcea  (3306) 1%
+                 Total program memory used (bytes):          0xccf  (3279) 1%
 
 
 Data Memory  [Origin = 0x800, Length = 0x8000]
@@ -136,8 +136,8 @@ External Symbols in Program Memory (by address):
                   0x00079e                  _RtccWriteTimeDate
                   0x0008a0                  _RtccInitPowerControl
                   0x0008c0                  _Init_osc
-                  0x000938                  _oscillator_switch
-                  0x000994                  _main
+                  0x000934                  _oscillator_switch
+                  0x000982                  _main
                   0x02af00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
@@ -167,8 +167,8 @@ External Symbols in Program Memory (by name):
                   0x000152                  __data_init_da
                   0x00013c                  __psv_init
                   0x000100                  __resetPRI
-                  0x000994                  _main
-                  0x000938                  _oscillator_switch
+                  0x000982                  _main
+                  0x000934                  _oscillator_switch
 
 Memory Configuration
 
@@ -313,11 +313,11 @@ __FDEVOPT1
  .debug_abbrev    0x000243         0x36 build/default/production/sfs_main.o
  .debug_abbrev    0x000279         0xe3 build/default/production/oscillator.o
 
-.debug_line       0x000000        0x3c7
+.debug_line       0x000000        0x3c6
  *(.debug_line)
  .debug_line      0x000000        0x252 build/default/production/rtcc.o
  .debug_line      0x000252         0x3a build/default/production/sfs_main.o
- .debug_line      0x00028c        0x13b build/default/production/oscillator.o
+ .debug_line      0x00028c        0x13a build/default/production/oscillator.o
 
 .debug_frame      0x000000        0x28e
  *(.debug_frame)
@@ -2461,9 +2461,9 @@ __c30_signature
 .config_BSLIM     0x02af10          0x2
  .config_BSLIM    0x02af10          0x2 build/default/production/sfs_main.o
 
-.text             0x0008c0         0xdc
- .text            0x0008c0         0xd4 build/default/production/oscillator.o
+.text             0x0008c0         0xca
+ .text            0x0008c0         0xc2 build/default/production/oscillator.o
                   0x0008c0                  _Init_osc
-                  0x000938                  _oscillator_switch
- .text            0x000994          0x8 build/default/production/sfs_main.o
-                  0x000994                  _main
+                  0x000934                  _oscillator_switch
+ .text            0x000982          0x8 build/default/production/sfs_main.o
+                  0x000982                  _main

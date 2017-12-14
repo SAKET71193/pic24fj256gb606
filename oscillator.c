@@ -33,7 +33,7 @@ void Init_osc(void)
     __builtin_write_OSCCONH( BITS2BYTEH( OSCCONbitsCopy ) );
     __builtin_write_OSCCONL( BITS2BYTEL( OSCCONbitsCopy ) );
     // Wait for this transfer to take place
-    while (COSC() != NOSC());
+    while (_COSC() != _NOSC());
     //Setup the DIV bits for the FRC, this values means the config_word needs to be: PLLDIV_DIV2
     CLKDIVbits.RCDIV0 = 0;
 
@@ -75,6 +75,6 @@ void oscillator_switch(BYTE NOSC)
     __builtin_write_OSCCONH( BITS2BYTEH( OSCCONbitsCopy ) );
     __builtin_write_OSCCONL( BITS2BYTEL( OSCCONbitsCopy ) );
     // Wait for this transfer to take place
-    while (COSC() != NOSC());
+    while (_COSC() != _NOSC());
   
 }
