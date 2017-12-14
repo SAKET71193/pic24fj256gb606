@@ -94,6 +94,62 @@
  ********************************************************************/
 #define SecOscSet(enable)  (OSCCONbits.SOSCEN = enable)
 
+/*********************************************************************
+ * Macro:           PllLockStatus() 
+ * PreCondition:    None
+ * Side Effects:    None
+ * Overview:        PLL lock status bit 
+                    1 = PLL module is in lock or PLL module start-up timer is satisfied
+                    0 = PLL module is out of lock, PLL start-up timer is running or PLL is disabled 
+ * Input:           None
+ * Output:          Value Of OSCCONbits.lock
+ * Note:            None
+ ********************************************************************/
+#define PllLockStatus(enable)  (OSCCONbits.LOCK)
 
 
+/*********************************************************************
+ * Macro:           PriOscSleep() 
+ * PreCondition:    None
+ * Side Effects:    None
+ * Overview:        Primary Oscillator Sleep Enable bit 
+                    1 = Primary Oscillator continues to operate during Sleep mode
+                    0 = Primary Oscillator is disabled during Sleep mode
+ * Input:           None
+ * Output:          Value Of OSCCONbits.lock
+ * Note:            None
+ ********************************************************************/
+#define PriOscSleep(enable)  (OSCCONbits.POSCEN = enable)
+
+
+
+/*********************************************************************
+ * Macro:           OscSwitchEnable() 
+ * PreCondition:    None
+ * Side Effects:    None
+ * Overview:        OSWEN: Oscillator Switch Enable bit
+                    1 = Initiates an oscillator switch to a clock source specified by the NOSC<2:0> bits
+                    0 = Oscillator switch is complete
+ * Input:           enable Switch oscillator option
+ * Output:          Value Of OSCCONbits.lock
+ * Note:            None
+ ********************************************************************/
+#define OscSwitchEnable(enable)  (OSCCONbits.OSWEN = enable)
+
+/*********************************************************************
+ * Macro:           IsOscSwitchComplete() 
+ * PreCondition:    None
+ * Side Effects:    None
+ * Overview:        OSWEN: Oscillator Switch Enable bit
+                    1 = Initiates an oscillator switch to a clock source specified by the NOSC<2:0> bits
+                    0 = Oscillator switch is complete
+ * Input:           enable Switch oscillator option
+ * Output:          Value Of OSCCONbits.lock
+ * Note:            None
+ ********************************************************************/
+#define IsOscSwitchComplete()  (OSCCONbits.OSWEN)
+
+
+
+        
 #endif
