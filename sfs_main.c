@@ -28,9 +28,7 @@
 #pragma config BSLIM = 0x1FFF           // Boot Segment Flash Page Address Limit bits (Boot Segment Flash page address  limit)
 
 // FSIGN
- 
-
-// FOSCSEL3 
+// FOSCSEL
 #pragma config FNOSC = PRI              // Oscillator Source Selection (Primary Oscillator (XT, HS, EC))
 #pragma config PLLMODE = DISABLED       // PLL Mode Selection (No PLL used; PLLEN bit is not available)
 #pragma config IESO = ON                // Two-speed Oscillator Start-up Enable bit (Start up device with FRC, then switch to user-selected oscillator source)
@@ -67,7 +65,6 @@
 #pragma config TMPRPIN = OFF            // Tamper Pin Enable bit (TMPRN pin function is disabled)
 #pragma config SOSCHP = ON              // SOSC High Power Enable bit (valid only when SOSCSEL = 1 (Enable SOSC high power mode (default))
 #pragma config ALTVREF = ALTREFEN       // Alternate Voltage Reference Location Enable bit (VREF+ and CVREF+ on RA10, VREF- and CVREF- on RA9)
-
 
 int main(void) {
 
