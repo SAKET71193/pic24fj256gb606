@@ -157,10 +157,128 @@
 
 //end I2CxCONH reg....
 
+
+//saket check _switch statement
+/*
 // I2CxSTAT: I2Cx STATUS REGISTER
 
 //ACKSTAT: Acknowledge Status bit (updated in all Master and Slave modes)
-#define I2C_ACK_BIT(I2C_NUM)    switch(I2C_NUM){case 1: I2C1STATbits.ACKSTAT break;case 2: I2C2STATbits.ACKSTAT break;case 3: I2C3STATbits.ACKSTAT break;}
+#define I2C_ACK_BIT(I2C_NUM)     int flag; \
+                                 switch(I2C_NUM){case 1: flag = I2C1STATbits.ACKSTAT; break;case 2: flag = I2C2STATbits.ACKSTAT; break;case 3: flag = I2C3STATbits.ACKSTAT; break;}
+
+//TRSTAT: Transmit Status bit (when operating as I 2 C master; applicable to master transmit operation)
+#define I2C_TRANS_BIT(I2C_NUM)   int flag; \
+                                 switch(I2C_NUM){case 1: flag = I2C1STATbits.TRSTAT; break;case 2: flag = I2C2STATbits.TRSTAT; break;case 3: flag = I2C3STATbits.TRSTAT; break;}
+
+//ACKTIM: Acknowledge Time Status bit (valid in I 2 C Slave mode only)
+#define I2C_TIME_ACK_BIT(I2C_NUM)   int flag; \
+                                 switch(I2C_NUM){case 1: flag = I2C1STATbits.ACKTIM; break;case 2: flag = I2C2STATbits.ACKTIM; break;case 3: flag = I2C3STATbits.ACKTIM; break;}
+  */
+
+/*******************************************************************
+Macro       : I2C1_ACK_Status
+
+Include     : i2c.h 
+
+Description : Macro to return I2C Acknowledge Status
+
+Arguments   : None
+
+Remarks     : None
+*******************************************************************/
+#define I2C1_ACK_Status		I2C1STATbits.ACKSTAT
+
+/*******************************************************************
+Macro       : I2C1_TRANS_Status
+
+Include     : i2c.h 
+
+Description : Macro to return I2C Transmit  bit  Status
+
+Arguments   : None
+
+Remarks     : None
+*******************************************************************/
+#define I2C1_TRANS_Status		I2C1STATbits.TRSTAT
+
+
+/*******************************************************************
+Macro       : I2C1_TIME_ACK_Status
+
+Include     : i2c.h 
+
+Description : Macro to return I2C Time Acknowledge bit  Status
+
+Arguments   : None
+
+Remarks     : None
+*******************************************************************/
+#define I2C1_TIME_ACK_Status		I2C1STATbits.ACKTIM
+
+/*******************************************************************
+Macro       : I2C1_TIME_ACK_Status
+
+Include     : i2c.h 
+
+Description : Macro to return I2C Time BUS CollisIon bit  Status
+ *              BCL: Bus Collision Detect bit (Master/Slave mode; cleared when I 2 C module is disabled, I2CEN = 0)
+                1 = A bus collision has been detected during a master or slave transmit operation
+                0 = No bus collision has been detected
+
+Arguments   : None
+
+Remarks     : None
+*******************************************************************/
+#define I2C1_BCL_Status		I2C1STATbits.BCL
+
+/*******************************************************************
+Macro       : I2C1_GC_Status
+
+Include     : i2c.h 
+
+Description : Macro to return I2C GC  bit  Status
+ *             GCSTAT: General Call Status bit (cleared after Stop detection)
+                    1 = General call address was received
+                    0 = General call address was not received
+Arguments   : None
+
+Remarks     : None
+*******************************************************************/
+#define I2C1_GC_Status		I2C1STATbits.GCSTAT
+
+/*******************************************************************
+Macro       : I2C1_ADD10_Status
+
+Include     : i2c.h 
+
+Description : Macro to return I2C add10  bit  Status
+ *             ADD10: 10-Bit Address Status bit (cleared after Stop detection)
+                    1 = 10-bit address was matched
+                    0 = 10-bit address was not matched
+Arguments   : None
+
+Remarks     : None
+*******************************************************************/
+#define I2C1_ADD10_Status		I2C1STATbits.ADD10
+
+/*******************************************************************
+Macro       : I2C1_IWCOL_Status
+
+Include     : i2c.h 
+
+Description : Macro to return I2C Write collosion  bit  Status
+ *             IWCOL: I2Cx Write Collision Detect bit
+                1 = An attempt to write to the I2CxTRN register failed because the I 2 C module is busy; must be cleared
+                in software
+                0 = No collision
+Arguments   : None
+
+Remarks     : None
+*******************************************************************/
+#define I2C1_IWCOL_Status		I2C1STATbits.IWCOL
+
+
+
 
 
 #endif
