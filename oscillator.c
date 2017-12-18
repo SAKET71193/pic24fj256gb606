@@ -10,7 +10,7 @@
 
 int Init_osc(void)
 {
-    unsigned int pllCounter;
+    unsigned int pllCounter; 
     OSCCONBITS OSCCONbitsCopy; // declare veriable to take backup 
     OSCCONbitsCopy =  OSCCONbits;
     
