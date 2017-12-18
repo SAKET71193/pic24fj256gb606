@@ -372,9 +372,4 @@ Remarks     : None
 *******************************************************************/
 #define I2C1_TBUF_Status		I2C1STATbits.TBF
 
-
-
-
-
-
 #endif
