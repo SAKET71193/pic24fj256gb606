@@ -277,6 +277,101 @@ Remarks     : None
 *******************************************************************/
 #define I2C1_IWCOL_Status		I2C1STATbits.IWCOL
 
+/*******************************************************************
+Macro       : I2C1_ROVERFLOW_Status
+
+Include     : i2c.h 
+
+Description : I2COV: I2Cx Receive Overflow Flag bit
+                1 = A byte was received while the I2CxRCV register is still holding the previous byte; I2COV is a ?don?t
+                care? in Transmit mode, must be cleared in software
+                0 = No overflow
+Arguments   : None
+Remarks     : None
+*******************************************************************/
+#define I2C1_ROVERFLOW_Status		I2C1STATbits.I2COV
+
+
+/*******************************************************************
+Macro       : I2C1_D/A_Status
+
+Include     : i2c.h 
+
+Description : D/A: Data/Address bit (when operating as I 2 C slave)
+                    1 = Indicates that the last byte received was data
+                    0 = Indicates that the last byte received or transmitted was an address
+Arguments   : None
+Remarks     : None
+*******************************************************************/
+#define I2C1_D/A_Status		I2C1STATbits.D_NOT_A
+
+/*******************************************************************
+Macro       : I2C1_STOPbit_Status
+
+Include     : i2c.h 
+
+Description : P: I2Cx Stop bit
+                Updated when Start, Reset or Stop is detected; cleared when the I 2 C module is disabled, I2CEN = 0.
+                1 = Indicates that a Stop bit has been detected last
+                0 = Stop bit was not detected last
+Arguments   : None
+Remarks     : None
+*******************************************************************/
+#define I2C1_STOPbit_Status		I2C1STATbits.P
+
+/*******************************************************************
+Macro       : I2C1_STARTbit_Status
+
+Include     : i2c.h 
+
+Description : S: I2Cx Start bit
+                Updated when Start, Reset or Stop is detected; cleared when the I 2 C module is disabled, I2CEN = 0.
+                1 = Indicates that a Start (or Repeated Start) bit has been detected last
+                0 = Start (or Repeated Start) bit was not detected last
+Arguments   : None
+Remarks     : None
+*******************************************************************/
+#define I2C1_STARTbit_Status		I2C1STATbits.S
+
+/*******************************************************************
+Macro       : I2C1_R/W_Status
+
+Include     : i2c.h 
+
+Description : R/W: Read/Write Information bit (when operating as I 2 C slave)
+                1 = Read: Indicates the data transfer is output from the slave
+                0 = Write: Indicates the data transfer is input to the slave
+Arguments   : None
+Remarks     : None
+*******************************************************************/
+#define I2C1_R/W_Status		I2C1STATbits.R_NOT_W
+
+/*******************************************************************
+Macro       : I2C1_RBUF_Status
+
+Include     : i2c.h 
+
+Description : RBF: Receive Buffer Full Status bit
+                    1 = Receive is complete, I2CxRCV is full
+                    0 = Receive is not complete, I2CxRCV is empty
+Arguments   : None
+Remarks     : None
+*******************************************************************/
+#define I2C1_RBUF_Status		I2C1STATbits.RBF
+
+/*******************************************************************
+Macro       : I2C1_TBUF_Status
+
+Include     : i2c.h 
+
+Description : TBF: Transmit Buffer Full Status bit
+                    1 = Transmit is in progress, I2CxTRN is full (8-bits of data)
+                    0 = Transmit is complete, I2CxTRN is empty
+Arguments   : None
+Remarks     : None
+*******************************************************************/
+#define I2C1_TBUF_Status		I2C1STATbits.TBF
+
 
 
 
