@@ -1,8 +1,9 @@
 #include <xc.h> // include processor files - each processor file is guarded.  
-#include"GenericTypeDefs.h"
+#include <GenericTypeDefs.h>
 
 #ifndef usr_rtcc_h
 #define usr_rtcc_h
+
 
 // union/structure for read/write of time into the RTCC device
 typedef union
