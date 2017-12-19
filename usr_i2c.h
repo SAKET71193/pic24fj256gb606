@@ -266,7 +266,7 @@ Macro       : I2C1_IWCOL_Status
 
 Include     : i2c.h 
 
-Description : Macro to return I2C Write collosion  bit  Status
+Description : Macro to return I2C Write collision  bit  Status
  *             IWCOL: I2Cx Write Collision Detect bit
                 1 = An attempt to write to the I2CxTRN register failed because the I 2 C module is busy; must be cleared
                 in software
@@ -303,7 +303,7 @@ Description : D/A: Data/Address bit (when operating as I 2 C slave)
 Arguments   : None
 Remarks     : None
 *******************************************************************/
-#define I2C1_D/A_Status		I2C1STATbits.D_NOT_A
+#define I2C1_DA_Status		I2C1STATbits.D_NOT_A
 
 /*******************************************************************
 Macro       : I2C1_STOPbit_Status
@@ -344,7 +344,7 @@ Description : R/W: Read/Write Information bit (when operating as I 2 C slave)
 Arguments   : None
 Remarks     : None
 *******************************************************************/
-#define I2C1_R/W_Status		I2C1STATbits.R_NOT_W
+#define I2C1_RW_Status		I2C1STATbits.R_NOT_W
 
 /*******************************************************************
 Macro       : I2C1_RBUF_Status

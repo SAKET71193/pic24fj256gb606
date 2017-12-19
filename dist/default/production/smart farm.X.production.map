@@ -88,9 +88,9 @@ Program Memory  [Origin = 0x100, Length = 0x2ae00]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0x7c0           0xba0  (2976)
-.text                        0x8c0                0xc8           0x12c  (300)
+.text                        0x8c0               0x78a           0xb4f  (2895)
 
-                 Total program memory used (bytes):          0xccc  (3276) 1%
+                 Total program memory used (bytes):         0x16ef  (5871) 2%
 
 
 Data Memory  [Origin = 0x800, Length = 0x8000]
@@ -136,14 +136,101 @@ External Symbols in Program Memory (by address):
                   0x0006c8                  _RtccWriteTime
                   0x00079e                  _RtccWriteTimeDate
                   0x0008a0                  _RtccInitPowerControl
-                  0x0008c0                  _Init_osc
-                  0x000928                  _oscillator_switch
-                  0x000980                  _main
+                  0x0008c0                  _AckI2C1
+                  0x0008ca                  _OpenI2C1
+                  0x0008dc                  _IdleI2C1
+                  0x000916                  _StartI2C1
+                  0x00091e                  _CloseI2C1
+                  0x00092e                  _ConfigIntI2C1
+                  0x00099e                  _DataRdyI2C1
+                  0x0009aa                  _getsI2C1
+                  0x000a14                  _MasterWriteI2C1
+                  0x000a30                  _MastergetsI2C1
+                  0x000a96                  _MasterputsI2C1
+                  0x000ab8                  _StopI2C1
+                  0x000ac0                  _MasterReadI2C1
+                  0x000ad8                  _MasterWaitForIntrI2C1
+                  0x000aea                  _NotAckI2C1
+                  0x000af4                  _RestartI2C1
+                  0x000afc                  _AckI2C2
+                  0x000b06                  _OpenI2C2
+                  0x000b18                  _IdleI2C2
+                  0x000b52                  _StartI2C2
+                  0x000b5a                  _CloseI2C2
+                  0x000b6a                  _ConfigIntI2C2
+                  0x000bde                  _DataRdyI2C2
+                  0x000bea                  _getsI2C2
+                  0x000c56                  _MasterWriteI2C2
+                  0x000c72                  _MastergetsI2C2
+                  0x000cd8                  _MasterputsI2C2
+                  0x000cfa                  _StopI2C2
+                  0x000d02                  _MasterReadI2C2
+                  0x000d1a                  _MasterWaitForIntrI2C2
+                  0x000d2c                  _NotAckI2C2
+                  0x000d36                  _RestartI2C2
+                  0x000d3e                  _AckI2C3
+                  0x000d48                  _OpenI2C3
+                  0x000d5a                  _IdleI2C3
+                  0x000d94                  _StartI2C3
+                  0x000d9c                  _CloseI2C3
+                  0x000dac                  _ConfigIntI2C3
+                  0x000e20                  _DataRdyI2C3
+                  0x000e2c                  _getsI2C3
+                  0x000e98                  _MasterWriteI2C3
+                  0x000eb4                  _MastergetsI2C3
+                  0x000f1a                  _MasterputsI2C3
+                  0x000f3c                  _StopI2C3
+                  0x000f44                  _MasterReadI2C3
+                  0x000f5c                  _MasterWaitForIntrI2C3
+                  0x000f70                  _NotAckI2C3
+                  0x000f7a                  _RestartI2C3
+                  0x000f82                  _Init_osc
+                  0x000fea                  _oscillator_switch
+                  0x001042                  _main
                   0x02af00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0008c0                  _Init_osc
+                  0x0008c0                  _AckI2C1
+                  0x000afc                  _AckI2C2
+                  0x000d3e                  _AckI2C3
+                  0x00091e                  _CloseI2C1
+                  0x000b5a                  _CloseI2C2
+                  0x000d9c                  _CloseI2C3
+                  0x00092e                  _ConfigIntI2C1
+                  0x000b6a                  _ConfigIntI2C2
+                  0x000dac                  _ConfigIntI2C3
+                  0x00099e                  _DataRdyI2C1
+                  0x000bde                  _DataRdyI2C2
+                  0x000e20                  _DataRdyI2C3
+                  0x0008dc                  _IdleI2C1
+                  0x000b18                  _IdleI2C2
+                  0x000d5a                  _IdleI2C3
+                  0x000f82                  _Init_osc
+                  0x000ac0                  _MasterReadI2C1
+                  0x000d02                  _MasterReadI2C2
+                  0x000f44                  _MasterReadI2C3
+                  0x000ad8                  _MasterWaitForIntrI2C1
+                  0x000d1a                  _MasterWaitForIntrI2C2
+                  0x000f5c                  _MasterWaitForIntrI2C3
+                  0x000a14                  _MasterWriteI2C1
+                  0x000c56                  _MasterWriteI2C2
+                  0x000e98                  _MasterWriteI2C3
+                  0x000a30                  _MastergetsI2C1
+                  0x000c72                  _MastergetsI2C2
+                  0x000eb4                  _MastergetsI2C3
+                  0x000a96                  _MasterputsI2C1
+                  0x000cd8                  _MasterputsI2C2
+                  0x000f1a                  _MasterputsI2C3
+                  0x000aea                  _NotAckI2C1
+                  0x000d2c                  _NotAckI2C2
+                  0x000f70                  _NotAckI2C3
+                  0x0008ca                  _OpenI2C1
+                  0x000b06                  _OpenI2C2
+                  0x000d48                  _OpenI2C3
+                  0x000af4                  _RestartI2C1
+                  0x000d36                  _RestartI2C2
+                  0x000f7a                  _RestartI2C3
                   0x000208                  _RtccInitClock
                   0x0008a0                  _RtccInitPowerControl
                   0x0002a4                  _RtccReadAlrmDate
@@ -162,14 +249,23 @@ External Symbols in Program Memory (by name):
                   0x0005e4                  _RtccWriteDate
                   0x0006c8                  _RtccWriteTime
                   0x00079e                  _RtccWriteTimeDate
+                  0x000916                  _StartI2C1
+                  0x000b52                  _StartI2C2
+                  0x000d94                  _StartI2C3
+                  0x000ab8                  _StopI2C1
+                  0x000cfa                  _StopI2C2
+                  0x000f3c                  _StopI2C3
                   0x000204                  __DefaultInterrupt
                   0x02af00                  __FSEC.sec
                   0x000152                  __data_init
                   0x000152                  __data_init_da
                   0x00013c                  __psv_init
                   0x000100                  __resetPRI
-                  0x000980                  _main
-                  0x000928                  _oscillator_switch
+                  0x0009aa                  _getsI2C1
+                  0x000bea                  _getsI2C2
+                  0x000e2c                  _getsI2C3
+                  0x001042                  _main
+                  0x000fea                  _oscillator_switch
 
 Memory Configuration
 
@@ -302,37 +398,40 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x1793
+.debug_info       0x000000       0x3e31
  *(.debug_info)
  .debug_info      0x000000       0x1100 build/default/production/rtcc.o
  .debug_info      0x001100        0x128 build/default/production/sfs_main.o
  .debug_info      0x001228        0x56b build/default/production/oscillator.o
+ .debug_info      0x001793       0x269e build/default/production/i2c.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x388
+.debug_abbrev     0x000000        0x56e
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x243 build/default/production/rtcc.o
  .debug_abbrev    0x000243         0x36 build/default/production/sfs_main.o
  .debug_abbrev    0x000279        0x10e build/default/production/oscillator.o
- .debug_abbrev    0x000387          0x1 build/default/production/i2c.o
+ .debug_abbrev    0x000387        0x1e7 build/default/production/i2c.o
 
-.debug_line       0x000000        0x3e0
+.debug_line       0x000000        0x64d
  *(.debug_line)
  .debug_line      0x000000        0x252 build/default/production/rtcc.o
  .debug_line      0x000252         0x3a build/default/production/sfs_main.o
  .debug_line      0x00028c        0x13a build/default/production/oscillator.o
- .debug_line      0x0003c6         0x1a build/default/production/i2c.o
+ .debug_line      0x0003c6        0x287 build/default/production/i2c.o
 
-.debug_frame      0x000000        0x28e
+.debug_frame      0x000000        0x7e2
  *(.debug_frame)
  .debug_frame     0x000000        0x212 build/default/production/rtcc.o
  .debug_frame     0x000212         0x30 build/default/production/sfs_main.o
  .debug_frame     0x000242         0x4c build/default/production/oscillator.o
+ .debug_frame     0x00028e        0x554 build/default/production/i2c.o
 
-.debug_str        0x000000         0xb9
+.debug_str        0x000000        0x1fe
  *(.debug_str)
  .debug_str       0x000000         0x94 build/default/production/rtcc.o
  .debug_str       0x000094         0x25 build/default/production/oscillator.o
+ .debug_str       0x0000b9        0x145 build/default/production/i2c.o
 
 .debug_loc
  *(.debug_loc)
@@ -341,7 +440,7 @@ __FDEVOPT1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x1d8
+                  0x000000        0x4f6
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000        0x188 build/default/production/rtcc.o
@@ -349,11 +448,13 @@ __FDEVOPT1
                   0x000188         0x1b build/default/production/sfs_main.o
  .debug_pubnames
                   0x0001a3         0x35 build/default/production/oscillator.o
+ .debug_pubnames
+                  0x0001d8        0x31e build/default/production/i2c.o
 
 .debug_ranges
  *(.debug_ranges)
 
-.debug_aranges    0x000000         0xd8
+.debug_aranges    0x000000         0xf0
  *(.debug_aranges)
  .debug_aranges
                   0x000000         0xa8 build/default/production/rtcc.o
@@ -361,6 +462,8 @@ __FDEVOPT1
                   0x0000a8         0x18 build/default/production/sfs_main.o
  .debug_aranges
                   0x0000c0         0x18 build/default/production/oscillator.o
+ .debug_aranges
+                  0x0000d8         0x18 build/default/production/i2c.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -2419,28 +2522,30 @@ LOAD FSEC
 LOAD default_isr
 
 .debug_pubtypes
-                  0x0000d8        0x1a3
+                  0x0000f0        0x3e3
  .debug_pubtypes
-                  0x0000d8        0x11d build/default/production/rtcc.o
+                  0x0000f0        0x11d build/default/production/rtcc.o
  .debug_pubtypes
-                  0x0001f5         0x12 build/default/production/sfs_main.o
+                  0x00020d         0x12 build/default/production/sfs_main.o
  .debug_pubtypes
-                  0x000207         0x74 build/default/production/oscillator.o
+                  0x00021f         0x74 build/default/production/oscillator.o
+ .debug_pubtypes
+                  0x000293        0x240 build/default/production/i2c.o
 
 __c30_signature
-                  0x00027b         0x24
+                  0x0004d3         0x24
  __c30_signature
-                  0x00027b          0x6 build/default/production/rtcc.o
+                  0x0004d3          0x6 build/default/production/rtcc.o
  __c30_signature
-                  0x000281          0x6 build/default/production/sfs_main.o
+                  0x0004d9          0x6 build/default/production/sfs_main.o
  __c30_signature
-                  0x000287          0x6 build/default/production/oscillator.o
+                  0x0004df          0x6 build/default/production/oscillator.o
  __c30_signature
-                  0x00028d          0x6 build/default/production/i2c.o
+                  0x0004e5          0x6 build/default/production/i2c.o
  __c30_signature
-                  0x000293          0x6 /opt/microchip/xc16/v1.33/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o)
+                  0x0004eb          0x6 /opt/microchip/xc16/v1.33/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o)
  __c30_signature
-                  0x000299          0x6 /opt/microchip/xc16/v1.33/bin/bin/../../lib/liblega-pic30-elf.a(data_init_24.o)
+                  0x0004f1          0x6 /opt/microchip/xc16/v1.33/bin/bin/../../lib/liblega-pic30-elf.a(data_init_24.o)
 
 .config_ALTVREF
                   0x02af2c          0x2
@@ -2467,9 +2572,58 @@ __c30_signature
 .config_BSLIM     0x02af10          0x2
  .config_BSLIM    0x02af10          0x2 build/default/production/sfs_main.o
 
-.text             0x0008c0         0xc8
- .text            0x0008c0         0xc0 build/default/production/oscillator.o
-                  0x0008c0                  _Init_osc
-                  0x000928                  _oscillator_switch
- .text            0x000980          0x8 build/default/production/sfs_main.o
-                  0x000980                  _main
+.text             0x0008c0        0x78a
+ .text            0x0008c0        0x6c2 build/default/production/i2c.o
+                  0x0008c0                  _AckI2C1
+                  0x0008ca                  _OpenI2C1
+                  0x0008dc                  _IdleI2C1
+                  0x000916                  _StartI2C1
+                  0x00091e                  _CloseI2C1
+                  0x00092e                  _ConfigIntI2C1
+                  0x00099e                  _DataRdyI2C1
+                  0x0009aa                  _getsI2C1
+                  0x000a14                  _MasterWriteI2C1
+                  0x000a30                  _MastergetsI2C1
+                  0x000a96                  _MasterputsI2C1
+                  0x000ab8                  _StopI2C1
+                  0x000ac0                  _MasterReadI2C1
+                  0x000ad8                  _MasterWaitForIntrI2C1
+                  0x000aea                  _NotAckI2C1
+                  0x000af4                  _RestartI2C1
+                  0x000afc                  _AckI2C2
+                  0x000b06                  _OpenI2C2
+                  0x000b18                  _IdleI2C2
+                  0x000b52                  _StartI2C2
+                  0x000b5a                  _CloseI2C2
+                  0x000b6a                  _ConfigIntI2C2
+                  0x000bde                  _DataRdyI2C2
+                  0x000bea                  _getsI2C2
+                  0x000c56                  _MasterWriteI2C2
+                  0x000c72                  _MastergetsI2C2
+                  0x000cd8                  _MasterputsI2C2
+                  0x000cfa                  _StopI2C2
+                  0x000d02                  _MasterReadI2C2
+                  0x000d1a                  _MasterWaitForIntrI2C2
+                  0x000d2c                  _NotAckI2C2
+                  0x000d36                  _RestartI2C2
+                  0x000d3e                  _AckI2C3
+                  0x000d48                  _OpenI2C3
+                  0x000d5a                  _IdleI2C3
+                  0x000d94                  _StartI2C3
+                  0x000d9c                  _CloseI2C3
+                  0x000dac                  _ConfigIntI2C3
+                  0x000e20                  _DataRdyI2C3
+                  0x000e2c                  _getsI2C3
+                  0x000e98                  _MasterWriteI2C3
+                  0x000eb4                  _MastergetsI2C3
+                  0x000f1a                  _MasterputsI2C3
+                  0x000f3c                  _StopI2C3
+                  0x000f44                  _MasterReadI2C3
+                  0x000f5c                  _MasterWaitForIntrI2C3
+                  0x000f70                  _NotAckI2C3
+                  0x000f7a                  _RestartI2C3
+ .text            0x000f82         0xc0 build/default/production/oscillator.o
+                  0x000f82                  _Init_osc
+                  0x000fea                  _oscillator_switch
+ .text            0x001042          0x8 build/default/production/sfs_main.o
+                  0x001042                  _main
