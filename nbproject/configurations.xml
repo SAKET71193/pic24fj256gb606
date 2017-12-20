@@ -19,6 +19,7 @@
       <itemPath>sfs_main.c</itemPath>
       <itemPath>oscillator.c</itemPath>
       <itemPath>i2c.c</itemPath>
+      <itemPath>nand_flash.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

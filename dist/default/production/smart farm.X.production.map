@@ -26,6 +26,7 @@ Command:
   build/default/production/sfs_main.o \
   build/default/production/oscillator.o \
   build/default/production/i2c.o \
+  build/default/production/nand_flash.o \
   --local-stack \
   --defsym=__MPLAB_BUILD=1 \
   -Tp24FJ256GB606.gld.00 \
@@ -293,6 +294,7 @@ LOAD build/default/production/rtcc.o
 LOAD build/default/production/sfs_main.o
 LOAD build/default/production/oscillator.o
 LOAD build/default/production/i2c.o
+LOAD build/default/production/nand_flash.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD /opt/microchip/xc16/v1.33/bin/bin/../../lib/PIC24F/libpPIC24Fxxx-elf.a
 LOAD /opt/microchip/xc16/v1.33/bin/bin/../../lib/libfx-elf.a
@@ -406,19 +408,21 @@ __FDEVOPT1
  .debug_info      0x001793       0x269e build/default/production/i2c.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x56e
+.debug_abbrev     0x000000        0x56f
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x243 build/default/production/rtcc.o
  .debug_abbrev    0x000243         0x36 build/default/production/sfs_main.o
  .debug_abbrev    0x000279        0x10e build/default/production/oscillator.o
  .debug_abbrev    0x000387        0x1e7 build/default/production/i2c.o
+ .debug_abbrev    0x00056e          0x1 build/default/production/nand_flash.o
 
-.debug_line       0x000000        0x64d
+.debug_line       0x000000        0x667
  *(.debug_line)
  .debug_line      0x000000        0x252 build/default/production/rtcc.o
  .debug_line      0x000252         0x3a build/default/production/sfs_main.o
  .debug_line      0x00028c        0x13a build/default/production/oscillator.o
  .debug_line      0x0003c6        0x287 build/default/production/i2c.o
+ .debug_line      0x00064d         0x1a build/default/production/nand_flash.o
 
 .debug_frame      0x000000        0x7e2
  *(.debug_frame)
@@ -2533,7 +2537,7 @@ LOAD default_isr
                   0x000293        0x240 build/default/production/i2c.o
 
 __c30_signature
-                  0x0004d3         0x24
+                  0x0004d3         0x2a
  __c30_signature
                   0x0004d3          0x6 build/default/production/rtcc.o
  __c30_signature
@@ -2543,9 +2547,11 @@ __c30_signature
  __c30_signature
                   0x0004e5          0x6 build/default/production/i2c.o
  __c30_signature
-                  0x0004eb          0x6 /opt/microchip/xc16/v1.33/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o)
+                  0x0004eb          0x6 build/default/production/nand_flash.o
  __c30_signature
-                  0x0004f1          0x6 /opt/microchip/xc16/v1.33/bin/bin/../../lib/liblega-pic30-elf.a(data_init_24.o)
+                  0x0004f1          0x6 /opt/microchip/xc16/v1.33/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o)
+ __c30_signature
+                  0x0004f7          0x6 /opt/microchip/xc16/v1.33/bin/bin/../../lib/liblega-pic30-elf.a(data_init_24.o)
 
 .config_ALTVREF
                   0x02af2c          0x2

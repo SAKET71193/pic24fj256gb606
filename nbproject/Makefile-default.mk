@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=rtcc.c sfs_main.c oscillator.c i2c.c
+SOURCEFILES_QUOTED_IF_SPACED=rtcc.c sfs_main.c oscillator.c i2c.c nand_flash.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/rtcc.o ${OBJECTDIR}/sfs_main.o ${OBJECTDIR}/oscillator.o ${OBJECTDIR}/i2c.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/rtcc.o.d ${OBJECTDIR}/sfs_main.o.d ${OBJECTDIR}/oscillator.o.d ${OBJECTDIR}/i2c.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/rtcc.o ${OBJECTDIR}/sfs_main.o ${OBJECTDIR}/oscillator.o ${OBJECTDIR}/i2c.o ${OBJECTDIR}/nand_flash.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/rtcc.o.d ${OBJECTDIR}/sfs_main.o.d ${OBJECTDIR}/oscillator.o.d ${OBJECTDIR}/i2c.o.d ${OBJECTDIR}/nand_flash.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/rtcc.o ${OBJECTDIR}/sfs_main.o ${OBJECTDIR}/oscillator.o ${OBJECTDIR}/i2c.o
+OBJECTFILES=${OBJECTDIR}/rtcc.o ${OBJECTDIR}/sfs_main.o ${OBJECTDIR}/oscillator.o ${OBJECTDIR}/i2c.o ${OBJECTDIR}/nand_flash.o
 
 # Source Files
-SOURCEFILES=rtcc.c sfs_main.c oscillator.c i2c.c
+SOURCEFILES=rtcc.c sfs_main.c oscillator.c i2c.c nand_flash.c
 
 
 CFLAGS=
@@ -122,6 +122,13 @@ ${OBJECTDIR}/i2c.o: i2c.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  i2c.c  -o ${OBJECTDIR}/i2c.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/i2c.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/i2c.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/nand_flash.o: nand_flash.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/nand_flash.o.d 
+	@${RM} ${OBJECTDIR}/nand_flash.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  nand_flash.c  -o ${OBJECTDIR}/nand_flash.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/nand_flash.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/nand_flash.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/rtcc.o: rtcc.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -150,6 +157,13 @@ ${OBJECTDIR}/i2c.o: i2c.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/i2c.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  i2c.c  -o ${OBJECTDIR}/i2c.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/i2c.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/i2c.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/nand_flash.o: nand_flash.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/nand_flash.o.d 
+	@${RM} ${OBJECTDIR}/nand_flash.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  nand_flash.c  -o ${OBJECTDIR}/nand_flash.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/nand_flash.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/nand_flash.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 
