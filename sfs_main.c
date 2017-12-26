@@ -69,6 +69,7 @@
 
 int main(void) {
 
+    LATC = 0;
     
     return 0;
 }

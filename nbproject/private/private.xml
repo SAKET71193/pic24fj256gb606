@@ -3,13 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/saket/MPLABXProjects/smart%20farm.X/rtcc.c</file>
-            <file>file:/home/saket/MPLABXProjects/smart%20farm.X/sfs_main.c</file>
+            <file>file:/home/saket/MPLABXProjects/smart%20farm.X/oscillator.c</file>
+            <file>file:/home/saket/MPLABXProjects/smart%20farm.X/usr_i2c.h</file>
+            <file>file:/home/saket/MPLABXProjects/smart%20farm.X/i2c.c</file>
             <file>file:/home/saket/MPLABXProjects/smart%20farm.X/usr_rtcc.h</file>
             <file>file:/home/saket/MPLABXProjects/smart%20farm.X/oscillator.h</file>
-            <file>file:/home/saket/MPLABXProjects/smart%20farm.X/oscillator.c</file>
-            <file>file:/home/saket/MPLABXProjects/smart%20farm.X/i2c.c</file>
-            <file>file:/home/saket/MPLABXProjects/smart%20farm.X/usr_i2c.h</file>
+            <file>file:/home/saket/MPLABXProjects/smart%20farm.X/nand_flash.c</file>
+            <file>file:/home/saket/MPLABXProjects/smart%20farm.X/sfs_main.c</file>
+            <file>file:/home/saket/MPLABXProjects/smart%20farm.X/rtcc.c</file>
         </group>
     </open-files>
 </project-private>
