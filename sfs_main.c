@@ -9,6 +9,7 @@
 #include "xc.h"
 #include <p24FJ256GB606.h>
 
+#define _XTAL_FREQ  20000000
 /*******************************  configuration *****************************************/
 
 // PIC24FJ256GB606 Configuration Bit Settings
