@@ -9,10 +9,10 @@ typedef union
 { 
     struct
     {
-        BYTE    rsvd;       // reserved for future use
-        BYTE    sec;        // BCD codification for seconds, 00-59
-        BYTE    min;        // BCD codification for minutes, 00-59
         BYTE    hour;       // BCD codification for hours, 00-24
+        BYTE    min;        // BCD codification for minutes, 00-59
+        BYTE    sec;        // BCD codification for seconds, 00-59
+        BYTE    rsvd;       // reserved for future use
     }f;                     // field access
     BYTE        b[4];       // BYTE access
     unsigned short int      w[2];       // 16 bits access
@@ -24,10 +24,10 @@ typedef union
 {
     struct
     {
-        BYTE    wday;       // BCD codification for day of the week, 00-06
-        BYTE    mday;       // BCD codification for day of the month, 01-31
-        BYTE    mon;        // BCD codification for month, 01-12
         BYTE    year;       // BCD codification for years, 00-99
+        BYTE    mon;        // BCD codification for month, 01-12
+        BYTE    mday;       // BCD codification for day of the month, 01-31
+        BYTE    wday;       // BCD codification for day of the week, 00-06
     }f;                     // field access
     BYTE        b[4];       // BYTE access
     unsigned short int      w[2];       // 16 bits access
@@ -40,18 +40,21 @@ typedef union
 { 
         struct
     {
-        BYTE    year;       // BCD codification for year, 00-99
-        BYTE    mon;        // BCD codification for month, 01-12
+        
+        BYTE    sec;        // BCD codification for seconds, 00-59 
+        BYTE    rsvd;       // reserved for future use
+    
+        BYTE    hour;       // BCD codification for hours, 00-24   
+        BYTE    min;        // BCD codification for minutes, 00-59
         
         BYTE    mday;       // BCD codification for day of the month, 01-31
         BYTE    wday;       // BCD codification for day of the week, 00-06
         
+        BYTE    year;       // BCD codification for year, 00-99
+        BYTE    mon;        // BCD codification for month, 01-12
         
-        BYTE    hour;       // BCD codification for hours, 00-24   
-        BYTE    min;        // BCD codification for minutes, 00-59
         
-        BYTE    sec;        // BCD codification for seconds, 00-59 
-        BYTE    rsvd;       // reserved for future use
+        
     }f;                     // field access
     BYTE        b[8];       // BYTE access
     unsigned short int      w[4];       // 16 bits access
