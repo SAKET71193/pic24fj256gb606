@@ -14,7 +14,6 @@
 
 // PIC24FJ256GB606 Configuration Bit Settings
 
-
 // FSEC
 #pragma config BWRP = OFF               // Boot Segment Write-Protect bit (Boot Segment may be written)
 #pragma config BSS = DISABLED           // Boot Segment Code-Protect Level bits (No Protection (other than BWRP))

@@ -231,17 +231,6 @@ void nand_read_id ()
   extid    = nand_read_byte(); // 4th
   reserved = nand_read_byte(); // 5th
   printf("Your device ID:   %02X %02X %02X %02X %02X \n", maf_id, dev_id, cellinfo, extid, reserved);
-  printf("\ntested...\n");
-  printf("K9F2G08X0M:       EC DA 80 15 50\n");
-  printf("NAND02GW3B2D:     20 DA 10 95 44\n");
-  printf("HY27UF082G2B:     AD DA 10 95 44\n");
-  printf("NAND512W3A2S:     20 76\n");
-  printf("\nvia docs...\n");
-  printf("K9F1G08U0C:       EC F1 00 95 40\n");
-  printf("K9F2G08U0M:       EC DA 80 15\n");
-  printf("K9F2G16U0M:       EC CA 80 55\n");
-  printf("K9F2G08U0C:       EC DA 10 15 44\n");
-
 
   for (; type->name != NULL; type++)
     if (maf_id == type->id)
